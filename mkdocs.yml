@@ -1,0 +1,80 @@
+# Project information, do not edit
+site_name:        'Thinkweek 2021- @dparnas'
+site_description: 'Summary from thinkweek for @dparnas'
+site_author:      'Dagfinn Parnas'
+
+repo_name: 'elsewhat/thinkweek-dparnas-2021'
+repo_url:  'https://github.com/elsewhat/thinkweek-dparnas-2021'
+edit_uri:  'edit/master/docs/'
+
+# Copyright, do not edit
+copyright: 'Copyright &copy; 2021 Dagfin Parnas'
+
+# Configuration, do not edit
+use_directory_urls: true
+theme:
+  name: 'material'
+  language: 'en'
+  font:
+    text: 'Roboto'
+    code: 'Roboto Mono'
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky        
+  icon:
+    repo: fontawesome/brands/github
+
+extra:
+  social:
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/dparnas
+
+nav:
+  - ThinkWeek:                          
+    - Overview:                          README.md
+    - Day 1:                              day1.md
+    - Day 2:                              day2.md
+    - Day 3:                              day3.md
+    - Day 4:                              day4.md
+    - Day 5:                              day5.md        
+  - Internal APIs and developer portals:                    
+    - Overview:                           internal-apis/README.md
+    - Developer mindset:                internal-apis/developer-mindset.md
+    - Developer experience for API consumers: 
+      - Overview:                          internal-apis/dx-consumer-overview.md
+      - First impressions:                  internal-apis/dx-consumer-first-impressions.md
+      - First experience:                  internal-apis/dx-consumer-first-experience.md
+      - First use case:                      internal-apis/dx-consumer-first-use-case.md
+      - First feature request:                  internal-apis/dx-consumer-first-feature-request.md
+      - First operational issue:                  internal-apis/dx-consumer-first-operational-issue.md
+      - First breaking change:                internal-apis/dx-consumer-first-breaking-change.md
+    - Developer experience for API producers: 
+      - Overview:                          internal-apis/dx-producer-overview.md
+      - Establish:                          internal-apis/dx-producer-establish.md
+      - Maturing features:                          internal-apis/dx-producer-maturing.md
+      - First release:                          internal-apis/dx-producer-first-release.md
+      - Drive adoption:                          internal-apis/dx-producer-drive-adoption.md
+      - Release strategy:                            internal-apis/dx-producer-release-strategy.md
+      - Operational excellency:                          internal-apis/dx-producer-operational.md
+    - API portal ideas:                         internal-apis/api-portal.md
+  - Smart contract tech:
+    - Overview:                          smart-contracts/README.md
+    - Learn ERC-721:                     smart-contracts/erc-721.md
+    - ERC-721 example:                    smart-contracts/erc-721-example.md
+    - ERC-721 best practice:              smart-contracts/erc-721-best-practice.md
+    - Smart contract security:               smart-contracts/smart-contract-security.md     
+    - ERC-721 events:                    smart-contracts/erc-721-events.md
+  - Smart contract usage:
+    - Overview:                           smart-contract-usage/README.md
+    - Collectibles:                           smart-contract-usage/collectibles.md
+    - Art:                           smart-contract-usage/art.md
+    - Generative art:                           smart-contract-usage/generative-art.md
+    - Games:                              smart-contract-usage/games.md
+    - Own a piece of internet history:                               smart-contract-usage/own-a-meme.md            
+    - Metaverse worlds:                           smart-contract-usage/metaverse-worlds.md
+    - Metaverse avatars:                           smart-contract-usage/metaverse-avatars.md
+    - Exclusive access:                           smart-contract-usage/exclusive-access.md
+    - Fundraising:                           smart-contract-usage/fundraising.md
+    - Voting:                           smart-contract-usage/voting.md
+    - DeFi:                           smart-contract-usage/defi.md
+    - Oracles:                           smart-contract-usage/oracles.md

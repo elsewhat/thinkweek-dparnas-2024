@@ -1,0 +1,54 @@
+name: build-and-publish
+
+on:
+  push:
+    branches:
+      - master
+ 
+jobs:
+  build:
+    name: Build and publish doc site
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+    - uses: actions/setup-python@v2
+      with:
+        python-version: 3.9
+    - name: Build web site using MkDocs
+      run: |
+        echo -----------------------------
+        echo Installing requirements
+        echo -----------------------------
+
+        pip3 install wheel
+        pip3 install mkdocs
+        pip3 install mkdocs-material        
+        pip3 install mkdocs-mermaid-plugin
+        pip3 install mkdocs-macros-plugin
+        pip3 install mkdocs-git-revision-date-plugin
+
+        echo -----------------------------
+        echo Building site
+        echo -----------------------------
+
+        pip3 show mkdocs
+        echo
+        pip3 show mkdocs-material
+        echo
+        pip3 show mkdocs-mermaid-plugin
+        echo        
+        pip3 show mkdocs-macros-plugin
+        echo
+        pip3 show mkdocs-git-revision-date-plugin
+        echo
+        PATH=$PATH:$HOME/.local/bin
+        mkdocs build
+    - name: Deploy docs
+      uses: mhausenblas/mkdocs-deploy-gh-pages@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        CONFIG_FILE: mkdocs.yml
+        EXTRA_PACKAGES: build-base
