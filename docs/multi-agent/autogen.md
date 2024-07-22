@@ -18,6 +18,7 @@ player_white.register_nested_chats(
 ```
 
 
+
 ## Local models
 Autogen supports [integration with non-OpenAI models](https://microsoft.github.io/autogen/docs/topics/non-openai-models/about-using-nonopenai-models), but it appears somewhat limited and not core functionality.
 
@@ -33,6 +34,23 @@ Anthropic support via [oai.anthropic package](https://microsoft.github.io/autoge
 ## Training
 
 [Deeplearning.AI - AI agentic design patterns with AutoGen](https://www.deeplearning.ai/short-courses/ai-agentic-design-patterns-with-autogen/)
+
+
+## Human in the loop
+Human in the loop input is well designed. 
+
+For example the below agent which is generating code to be executed locally, will always require a human in the loop to continue.
+
+```
+code_executor_agent = ConversableAgent(
+    name="code_executor_agent",
+    llm_config=False,
+    code_execution_config={"executor": executor},
+    human_input_mode="ALWAYS",
+    default_auto_reply=
+    "Please continue. If everything is done, reply 'TERMINATE'.",
+)
+```
 
 
 ## Tool use
