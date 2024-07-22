@@ -1,0 +1,54 @@
+
+## Thoughts
+Autogen is an opinionated framework which has choosen chats as the main collaboration entity. 
+When our use case is more focus on common tasks to be solved, this can create unnecessary complexity.
+
+Example of this can be found how nested chats towards a proxy are require in order to perform tool use.
+```
+player_white.register_nested_chats(
+    trigger=player_black,
+    chat_queue=[
+        {
+            "sender": board_proxy,
+            "recipient": player_white,
+            "summary_method": "last_msg",
+        }
+    ],
+)
+```
+
+
+## Local models
+Autogen supports [integration with non-OpenAI models](https://microsoft.github.io/autogen/docs/topics/non-openai-models/about-using-nonopenai-models), but it appears somewhat limited and not core functionality.
+
+It'll require:
+
+- Usage of a proxy server such as LiteLLM which supports OpenAIs API on top of Ollama
+- Creating a [CustomModel class](https://microsoft.github.io/autogen/blog/2024/01/26/Custom-Models/)
+- Use draft [pull request #3056 for Autogen Ollama]( https://github.com/microsoft/autogen/pull/3056)
+
+
+Anthropic support via [oai.anthropic package](https://microsoft.github.io/autogen/docs/reference/oai/anthropic/).
+
+## Training
+
+[Deeplearning.AI - AI agentic design patterns with AutoGen](https://www.deeplearning.ai/short-courses/ai-agentic-design-patterns-with-autogen/)
+
+
+## Tool use
+
+
+## Termination condition
+```
+joe = ConversableAgent(
+    name="joe",
+    system_message=
+    "Your name is Joe and you are a stand-up comedian. "
+    "When you're ready to end the conversation, say 'I gotta go'.",
+    llm_config=llm_config,
+    human_input_mode="NEVER",
+    is_termination_msg=lambda msg: "I gotta go" in msg["content"] or "Goodbye" in msg["content"],
+)
+```
+
+Feels unnatural to have this on the agent side instead of on the chat/task side.
