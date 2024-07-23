@@ -54,7 +54,7 @@ code_executor_agent = ConversableAgent(
 
 
 ## Tool use
-
+Powerful class to execute local code and retrieve the output (TODO add details)
 
 ## Termination condition
 ```
