@@ -13,3 +13,19 @@ There is plenty of truths to this, but not all of the arguments can be translate
 Here there right frameworks provide additional benefits for how the code is maintained and extended over its lifetime.
 
 My major gripe with the frameworks so far, is that they are very opinionated in their abstractions and in many cases these abstraction add significant amount of complexity.
+
+## Inspection framework network traffic
+I'm running the frameworks from a devcontainer docker image and connecting either to local models hosted by ollama or to llm providers such as openai og anthropic. 
+
+It's useful to be able to inspect the network traffic coming from the docker image. 
+[Edgeshark](https://edgeshark.siemens.io/) provides a method for this. 
+
+Install through:
+
+- [Docker Compose v2 command](https://edgeshark.siemens.io/#/getting-started?id=service-deployment) from ubuntu wsl running locally (outside any docker container)
+- Install Wireshark
+- Install Wireshark Capture plugin (was unable to capture via the WebUI although it should be supported)
+
+To capture, run wireshark and start a capture via [Docker host capture](https://edgeshark.siemens.io/#/capture-extcap) (created by the Wireshark capture plugin).
+
+![Capture](img/capture.png)
