@@ -42,6 +42,17 @@ Predefined tools as of 2024.07.23:
 | **YoutubeChannelSearchTool**| A RAG tool for searching within YouTube channels, useful for video content analysis.           |
 | **YoutubeVideoSearchTool**  | A RAG tool aimed at searching within YouTube videos, ideal for video data extraction.          |
 
+## Telemtry
+https://telemetry.crewai.com:4319
+https://github.com/crewAIInc/crewAI/blob/4da5cc97789177a493eeaff90e3e8908fb81b022/src/crewai/telemetry/telemetry.py#L22
+
+os.environ["OTEL_SDK_DISABLED"] = "true"
+
+etc/hosts
+127.0.0.1	telemetry.crewai.com
+
+https://github.com/crewAIInc/crewAI/pull/402
+
 ## Install dependencies
 Crewai has a very large list of indirect dependencies.
 (assume many of them come through langchain_community)
@@ -58,3 +69,7 @@ ntions, opentelemetry-instrumentation, openai, langsmith, lancedb, kubernetes, g
 ructor, google-cloud-core, fastapi-cli, boto3, opentelemetry-instrumentation-fastapi, opentelemetry-exporter-otlp-proto-http, opentelemetry-exporter-otlp-proto-grpc, mem0ai, langchain-text-splitters, langchain-openai, google-cloud-s
 torage, google-cloud-resource-manager, google-cloud-bigquery, fastapi, cohere, langchain, google-cloud-aiplatform, chromadb, langchain_community, langchain-experimental, langchain-cohere, embedchain, crewai_tools, crewai
 ```
+
+## Thoughts
+CrewAI+ product is a central part of there offering and in many ways it's not a traditional open-source project. 
+Nothing wrong necessarily with this, but worth being aware of. 
