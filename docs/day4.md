@@ -1,6 +1,6 @@
 # Day 4 - 25.07
 
 
-## Topic of toyday 
+## Topic of today 
 
 ## Time schedule

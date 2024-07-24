@@ -4,3 +4,4 @@ https://resources.oreilly.com/examples?filter=oracle
 https://github.com/Oralytics/SQL-and-PLSQL-from-the-Experts-Sample-code
 https://github.com/Oralytics/Oracle-R-Enterprise-Sample-Code
 
+Batch creation of embeddings for the data ? 
