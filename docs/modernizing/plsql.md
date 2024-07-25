@@ -8,6 +8,20 @@ Batch creation of embeddings for the data ?
 
 Perform git commits as part of the agentic flow??
 
+ajv validation of yaml files 
+ajv -s schema.json -d doc.yml -c ajv-formats --verbose
+
+schema.json
+{
+  "type": "object",
+  "properties": {
+     "date": {
+        "type": "string",
+        "format": "date"
+     }
+   }
+}
+
 Prompt for ReAct
 https://til.simonwillison.net/llms/python-react-pattern
 
