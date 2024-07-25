@@ -1,4 +1,16 @@
 
+## Hands-on experimentation
+Experimentation requires hands-on experience and therefore I worked on code for the major multi-agent frameworks. 
+This code in large degree followed the lessons in the [deeplearning.ai courses](https://learn.deeplearning.ai/), but were extended to
+
+- Use local models instead of closed models
+- Run in devcontainer docker containers
+
+- AutoGen [elsewhat/multi-agent-autogen-experiments](https://github.com/elsewhat/multi-agent-autogen-experiments)
+- CrewAI [elsewhat/multi-agent-crewai-experiments](https://github.com/elsewhat/multi-agent-crewai-experiments)
+- LangChain [elsewhat/multi-agent-langgraph-experiments](https://github.com/elsewhat/multi-agent-langgraph-experiments)
+
+
 ## No framework
 There is a convincing argument to be made that agentic workflows do not need to use a framework. 
 
