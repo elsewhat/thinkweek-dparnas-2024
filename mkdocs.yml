@@ -43,4 +43,7 @@ nav:
     - Langchain:                    multi-agent/langchain.md
     - crewAI:                       multi-agent/crewai.md
   - Open LLM models:
-    - Overview:                     llm/index.md 
+    - Overview:                     llm/index.md
+  - Modernizing enterprise software with LLMs:
+    - Overview:                     modernizing/index.md
+    - PL/SQL:                       modernizing/plsql.md
