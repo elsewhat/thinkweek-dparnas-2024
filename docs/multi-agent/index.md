@@ -31,8 +31,8 @@ My major gripe with the frameworks so far, is that they are very opinionated in 
 ## Inspection framework network traffic
 I'm running the frameworks from a devcontainer docker image and connecting either to local models hosted by ollama or to llm providers such as openai og anthropic. 
 
-It's useful to be able to inspect the network traffic coming from the docker image. 
-[Edgeshark](https://edgeshark.siemens.io/) provides a method for this. 
+It's useful to be able to inspect the HTTP network traffic coming from the docker image. 
+[Edgeshark](https://edgeshark.siemens.io/) provides a method for this for HTTP (but not HTTPS).
 
 Install through:
 
