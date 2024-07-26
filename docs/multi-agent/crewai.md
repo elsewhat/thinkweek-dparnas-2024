@@ -1,8 +1,14 @@
+## My code repository
+[elsewhat/multi-agent-crewai-experiments](https://github.com/elsewhat/multi-agent-crewai-experiments)
+
+## Thoughts
+CrewAI+ product is a central part of there offering and in many ways it's not a traditional open-source project. 
+Nothing wrong necessarily with this, but worth being aware of. 
 
 ## Local models
 [Ollama support](https://docs.crewai.com/how-to/LLM-Connections/?h=ollama#ollama-integration) with local models is in place.
 
-[Memory](https://docs.crewai.com/core-concepts/Memory/?h=memory#how-memory-systems-empower-agents) by default uses OpenAI Embeddings by default and requires an OpenAI API key, but you can change it by setting embedder to a different model.
+[Memory](https://docs.crewai.com/core-concepts/Memory/?h=memory#how-memory-systems-empower-agents) by default uses OpenAI Embeddings by default and requires an OpenAI API key. 
 
 ## Tools
 Tools can be assigned to an agent or to a task.
@@ -43,33 +49,8 @@ Predefined tools as of 2024.07.23:
 | **YoutubeVideoSearchTool**  | A RAG tool aimed at searching within YouTube videos, ideal for video data extraction.          |
 
 ## Telemtry
-https://telemetry.crewai.com:4319
-https://github.com/crewAIInc/crewAI/blob/4da5cc97789177a493eeaff90e3e8908fb81b022/src/crewai/telemetry/telemetry.py#L22
+crewAI automatically collects telemetry and this is currently not possible to turn off. The main reason for this is likely commercial related to their paid version.
 
-os.environ["OTEL_SDK_DISABLED"] = "true"
+The telemetry is sent to `https://telemetry.crewai.com:4319`. [telemetry.py](https://github.com/crewAIInc/crewAI/blob/4da5cc97789177a493eeaff90e3e8908fb81b022/src/crewai/telemetry/telemetry.py#L22) is the class implementing the telemtry. 
 
-etc/hosts
-127.0.0.1	telemetry.crewai.com
-
-https://github.com/crewAIInc/crewAI/pull/402
-
-## Install dependencies
-Crewai has a very large list of indirect dependencies.
-(assume many of them come through langchain_community)
-```
-Installing collected packages: sortedcontainers, schema, ratelimiter, pytz, pypika, mpmath, monotonic, mmh3, flatbuffers, docx2txt, appdirs, zipp, wrapt, websockets, websocket-client, uvloop, urllib3, tzdata, typing-extensions, tqdm
-, tenacity, tabulate, sympy, soupsieve, sniffio, six, shellingham, semver, regex, PyYAML, pytube, python-multipart, python-dotenv, pysocks, pysbd, pyproject_hooks, pypdf, pygments, pyasn1, py, protobuf, portalocker, pluggy, pillow,
-parameterized, packaging, overrides, orjson, opentelemetry-util-http, oauthlib, numpy, nodeenv, mypy-extensions, multidict, mdurl, MarkupSafe, jsonref, jsonpointer, json-repair, jmespath, jiter, iniconfig, importlib-resources, idna,
- hyperframe, humanfriendly, httpx-sse, httptools, hpack, h11, grpcio, greenlet, google-crc32c, fsspec, frozenlist, filelock, fastavro, eval-type-backport, docstring-parser, dnspython, distro, decorator, click, charset-normalizer, ce
-rtifi, cachetools, bcrypt, backoff, attrs, asgiref, annotated-types, yarl, wsproto, uvicorn, typing-inspect, types-requests, SQLAlchemy, shapely, rsa, retry, requests, python-dateutil, pytest, pyright, pydantic-core, pyasn1-modules,
- pyarrow, pulsar-client, proto-plus, outcome, opentelemetry-proto, marshmallow, markdown-it-py, Mako, jsonpatch, jinja2, importlib-metadata, httpcore, h2, grpcio-tools, googleapis-common-protos, google-resumable-media, email_validat
-or, deprecation, deprecated, coloredlogs, chroma-hnswlib, build, beautifulsoup4, anyio, aiosignal, watchfiles, trio, tiktoken, starlette, rich, requests-oauthlib, pylance, pydantic, posthog, pandas, opentelemetry-exporter-otlp-proto
--common, opentelemetry-api, onnxruntime, huggingface-hub, httpx, grpcio-status, gptcache, google-auth, docker, dataclasses-json, botocore, alembic, aiohttp, typer, trio-websocket, tokenizers, s3transfer, opentelemetry-semantic-conve
-ntions, opentelemetry-instrumentation, openai, langsmith, lancedb, kubernetes, grpc-google-iam-v1, groq, google-api-core, together, selenium, qdrant-client, opentelemetry-sdk, opentelemetry-instrumentation-asgi, langchain-core, inst
-ructor, google-cloud-core, fastapi-cli, boto3, opentelemetry-instrumentation-fastapi, opentelemetry-exporter-otlp-proto-http, opentelemetry-exporter-otlp-proto-grpc, mem0ai, langchain-text-splitters, langchain-openai, google-cloud-s
-torage, google-cloud-resource-manager, google-cloud-bigquery, fastapi, cohere, langchain, google-cloud-aiplatform, chromadb, langchain_community, langchain-experimental, langchain-cohere, embedchain, crewai_tools, crewai
-```
-
-## Thoughts
-CrewAI+ product is a central part of there offering and in many ways it's not a traditional open-source project. 
-Nothing wrong necessarily with this, but worth being aware of. 
+A pull request to [enable telemtry opt-out](https://github.com/crewAIInc/crewAI/pull/402), but I don't believe it will ever be merged.

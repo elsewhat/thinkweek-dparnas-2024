@@ -6,10 +6,17 @@ This code in large degree followed the lessons in the [deeplearning.ai courses](
 - Use local models instead of closed models
 - Run in devcontainer docker containers
 
+Code repositories:
+
 - AutoGen [elsewhat/multi-agent-autogen-experiments](https://github.com/elsewhat/multi-agent-autogen-experiments)
-- CrewAI [elsewhat/multi-agent-crewai-experiments](https://github.com/elsewhat/multi-agent-crewai-experiments)
+- crewAI [elsewhat/multi-agent-crewai-experiments](https://github.com/elsewhat/multi-agent-crewai-experiments)
 - LangChain [elsewhat/multi-agent-langgraph-experiments](https://github.com/elsewhat/multi-agent-langgraph-experiments)
 
+
+For [LangChain](multi-agent/langchain.md) I performed some experiments related to modernizing enterprise solutions with LLM:
+
+- [Oracle table defintion to OpenAPI component](https://github.com/elsewhat/multi-agent-langgraph-experiments/blob/main/ora-tables-to-openapi-component_streaming.py)
+- [Oracle stored procedure classification with tools/functions](https://github.com/elsewhat/multi-agent-langgraph-experiments/blob/main/ora-stored-procedure-classification.py)
 
 ## No framework
 There is a convincing argument to be made that agentic workflows do not need to use a framework. 
@@ -27,19 +34,3 @@ There is plenty of truths to this, but not all of the arguments can be translate
 Here there right frameworks provide additional benefits for how the code is maintained and extended over its lifetime.
 
 My major gripe with the frameworks so far, is that they are very opinionated in their abstractions and in many cases these abstraction add significant amount of complexity.
-
-## Inspection framework network traffic
-I'm running the frameworks from a devcontainer docker image and connecting either to local models hosted by ollama or to llm providers such as openai og anthropic. 
-
-It's useful to be able to inspect the HTTP network traffic coming from the docker image. 
-[Edgeshark](https://edgeshark.siemens.io/) provides a method for this for HTTP (but not HTTPS).
-
-Install through:
-
-- [Docker Compose v2 command](https://edgeshark.siemens.io/#/getting-started?id=service-deployment) from ubuntu wsl running locally (outside any docker container)
-- Install Wireshark
-- Install Wireshark Capture plugin (was unable to capture via the WebUI although it should be supported)
-
-To capture, run wireshark and start a capture via [Docker host capture](https://edgeshark.siemens.io/#/capture-extcap) (created by the Wireshark capture plugin).
-
-![Capture](img/capture.png)

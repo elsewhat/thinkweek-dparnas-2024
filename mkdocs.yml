@@ -42,8 +42,7 @@ nav:
   - AI agent frameworks:
     - Overview:                     multi-agent/index.md
     - Autogen:                      multi-agent/autogen.md
+    - crewAI:                       multi-agent/crewai.md    
     - Langchain:                    multi-agent/langchain.md
-    - crewAI:                       multi-agent/crewai.md
-  - Modernizing enterprise software with LLMs:
+  - Modernizing enterprise solutions with LLMs:
     - Overview:                     modernizing/index.md
-    - PL/SQL:                       modernizing/plsql.md

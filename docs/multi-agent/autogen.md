@@ -1,7 +1,10 @@
+## My code repository
+[elsewhat/multi-agent-autogen-experiments](https://github.com/elsewhat/multi-agent-autogen-experiments)
+
 
 ## Thoughts
 Autogen is an opinionated framework which has choosen chats as the main collaboration entity. 
-When our use case is more focus on common tasks to be solved, this can create unnecessary complexity.
+When our use case is more focus on tasks to be solved, this can create unnecessary complexity.
 
 Example of this can be found how nested chats towards a proxy are require in order to perform tool use.
 ```
@@ -17,19 +20,22 @@ player_white.register_nested_chats(
 )
 ```
 
+AutoGen was the first framework I experiemented with and ideally I should have had enough time to return to it validate my initial findings.
 
+## Languages
+Python is the primary language, but unlike the other frameworks there is also a [AutoGen for dotnet](https://microsoft.github.io/autogen-for-net/) which could ease enterprise adoption.
 
 ## Local models
 Autogen supports [integration with non-OpenAI models](https://microsoft.github.io/autogen/docs/topics/non-openai-models/about-using-nonopenai-models), but it appears somewhat limited and not core functionality.
 
-It'll require:
+It'll require one of:
 
 - Usage of a proxy server such as LiteLLM which supports OpenAIs API on top of Ollama
 - Creating a [CustomModel class](https://microsoft.github.io/autogen/blog/2024/01/26/Custom-Models/)
 - Use draft [pull request #3056 for Autogen Ollama]( https://github.com/microsoft/autogen/pull/3056)
 
 
-Anthropic support via [oai.anthropic package](https://microsoft.github.io/autogen/docs/reference/oai/anthropic/).
+Closed models from Anthropic is supported via [oai.anthropic package](https://microsoft.github.io/autogen/docs/reference/oai/anthropic/).
 
 ## Training
 
@@ -54,7 +60,7 @@ code_executor_agent = ConversableAgent(
 
 
 ## Tool use
-Powerful class to execute local code and retrieve the output (TODO add details)
+Powerful [capabilities](https://microsoft.github.io/autogen/docs/tutorial/tool-use/) to execute local code and retrieve the output.
 
 ## Termination condition
 ```

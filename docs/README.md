@@ -60,7 +60,7 @@ There is plenty of truths to this, but not all of the arguments can be translate
 Here there right frameworks provide additional benefits for how the code is maintained and extended over its lifetime.
 
 ## Modernizing enterprise sofware with LLMs
-The background for this thought experiment is the renwal of large enterprise system with outdated technology and plenty of technical debt. 
+The background for this thought experiment is the renwal of large enterprise solutions with outdated technology and plenty of technical debt. 
 Typically, such solutions will take years to modernize with a traditional approach and have high complexity and risk. 
 
 Based on my experiences in the ThinkWeek, I believe it's possible to use LLMs in this modernization process. 
@@ -68,7 +68,7 @@ It will require:
 
 - Combination of open and closed LLMs (fit for purpose and cost)
 - Well-defined workflows setup as cyclic graphs with intermediate output in both structured and unstructered form
-- Tools to verify the validatity and quality of the output (such as [spectral-cli](https://github.com/stoplightio/spectral) ) included in the cyclic graphs
+- Tools to verify the validity and quality of the output (such as [spectral-cli](https://github.com/stoplightio/spectral) ) included in the cyclic graphs
 - Agentic patterns emerging from research such as [ReAct - Synergizing reasoning and acting in language models](https://arxiv.org/abs/2210.03629), [Self-Refine: Iterative refinement with self-feedback ](https://arxiv.org/abs/2303.17651) and [Code Generation with AlphaCodium: From Prompt Engineering to Flow Engineering](https://arxiv.org/abs/2401.08500)
 
 

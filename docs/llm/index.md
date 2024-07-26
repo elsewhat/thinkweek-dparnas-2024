@@ -36,6 +36,10 @@ The Q8 model should be preferred if it's fits in GPU memory.
 
 Some models have K_M and K_S postfixes, such as `llama3.1:8b-instruct-q5_K_M`. The K_M will [normally be preferred](https://github.com/ggerganov/llama.cpp/pull/1684#issuecomment-1579252501).
 
+## Embeddings
+[Ollama embeddings](https://ollama.com/blog/embedding-models) are supported, but unclear if it has feature parity with [OpenAI embeddings](https://platform.openai.com/docs/guides/embeddings)
+Embeddings measure the relatedness of text strings.
+
 ## Open vs closed models
 [Open Source AI Is the Path Forward](https://about.fb.com/news/2024/07/open-source-ai-is-the-path-forward/) is the title of Mark Zuckerbergs letter attached to the [Llama 3.1 release](https://ai.meta.com/blog/meta-llama-3-1/). He expands on this in [this interview](https://x.com/rowancheung/status/1815763595197616155) with Rowan Cheung.
 
@@ -66,3 +70,20 @@ From before, I had gathered a list of some relevant models and their license:
 - [Mixtral from Mistral](https://huggingface.co/mistralai) - [Apache 2.0 license](https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.2) (I used its successor Mistral Nemo mistral-nemo-32kb:12b-instruct-2407-q8_0 quite a bit)
 - [Llama3 from Meta](https://github.com/meta-llama/llama3/blob/main/MODEL_CARD.md) - [Meta llama3 community license](https://llama.meta.com/llama3/license/)
 - [NorLLM from NorwAI ](https://www.universitetsavisa.no/406796)- Apache 2.0, but must also follow the underlying base model
+
+
+## Inspection framework network traffic
+I'm running the frameworks from a devcontainer docker image and connecting either to local models hosted by ollama or to llm providers such as openai og anthropic. 
+
+It's useful to be able to inspect the HTTP network traffic coming from the docker image. 
+[Edgeshark](https://edgeshark.siemens.io/) provides a method for this for HTTP (but not HTTPS).
+
+Install through:
+
+- [Docker Compose v2 command](https://edgeshark.siemens.io/#/getting-started?id=service-deployment) from ubuntu wsl running locally (outside any docker container)
+- Install Wireshark
+- Install Wireshark Capture plugin (was unable to capture via the WebUI although it should be supported)
+
+To capture, run wireshark and start a capture via [Docker host capture](https://edgeshark.siemens.io/#/capture-extcap) (created by the Wireshark capture plugin).
+
+![Capture](img/capture.png)
