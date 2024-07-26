@@ -21,3 +21,12 @@ Notes:
 - The bowling context of task sometimes made the model diverge to content not part of the initial Oracle table definition (might be possible to overcome by repeating the overall task context)
 - Spectral could be used to add additional custom rules to promote improve the quality and the completness of the API contract (for example to require examples)
 - Spectral warnings might have been good to remove from the output through a custom rule set.
+
+
+## Ideas
+Batch creation of embeddings for the data ? 
+
+Perform git commits as part of the agentic flow??
+
+ajv validation of yaml files 
+ajv -s schema.json -d doc.yml -c ajv-formats --verbose
