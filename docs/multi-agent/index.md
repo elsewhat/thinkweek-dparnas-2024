@@ -13,7 +13,7 @@ Code repositories:
 - LangChain [elsewhat/multi-agent-langgraph-experiments](https://github.com/elsewhat/multi-agent-langgraph-experiments)
 
 
-For [LangChain](multi-agent/langchain.md) I performed some experiments related to modernizing enterprise solutions with LLM:
+For [LangChain](multi-agent/langchain.md) I performed some experiments related to modernizing enterprise solutions with LLMs:
 
 - [Oracle table defintion to OpenAPI component](https://github.com/elsewhat/multi-agent-langgraph-experiments/blob/main/ora-tables-to-openapi-component_streaming.py)
 - [Oracle stored procedure classification with tools/functions](https://github.com/elsewhat/multi-agent-langgraph-experiments/blob/main/ora-stored-procedure-classification.py)
@@ -33,4 +33,4 @@ Matt Williams believes AI agent frameworks are relevant "When you have a job tha
 There is plenty of truths to this, but not all of the arguments can be translated directly to an enterprise software setting. 
 Here there right frameworks provide additional benefits for how the code is maintained and extended over its lifetime.
 
-My major gripe with the frameworks so far, is that they are very opinionated in their abstractions and in many cases these abstraction add significant amount of complexity.
+My major gripe with the frameworks in general, is that they are very opinionated in their abstractions and in many cases these abstraction add significant amount of complexity.

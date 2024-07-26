@@ -1,9 +1,9 @@
-The background for this thought experiment is the renwal of large enterprise solutions with outdated technology and plenty of technical debt. 
+The background for this thought experiment is the renewal of large enterprise solutions with outdated technology and plenty of technical debt. 
 Typically, such solutions will take years to modernize with a traditional approach and have high complexity and risk. 
 
 I believe it's possible to use LLMs in to speed up this modernization process.
 
-The key is to break it down in smaller well-defined agentic with intermediate ouput in both structured and unstructred form. 
+The key is to break it down in smaller well-defined agentic workflows with intermediate ouput in both structured and unstructred form. 
 
 Let's do a thought experiment to modernize an example enterprise solution with a long history. 
 The business logic is primarily in PL/SQL stored procedures in Oracle. 
@@ -60,7 +60,7 @@ LLMs can provide this classification through "tool/functions" and this was teste
     'tables': 'employees, departments'
 }
 ```
-Note: boundedContext should be added both to output as well
+Note: belongsToBoundedContext should be added to the output as well
 
 ## Step 3 - Contracts for each bounded context
 Creating the contracts for each bounded context would be next. 
@@ -93,12 +93,13 @@ def node_feedback(state: AgentState):
 ```
 
 This is the agentic workflow used in the example.
+
 ![Capture](img/graph_ora_tables.png)
 
 ## Step 4 - Implementation of contract
 The implementation of the API can be done by combining the API contract and the relevant code package. 
 
-This is a complicate step and will require many iterations on a fit for purpose agentic workflow. It will likely also require a human in the loop to constant improve the implementation. 
+This is a complicate step and will require many iterations on a fit for purpose agentic workflow. It will likely also require a human in the loop to constantly improve the implementation. 
 
 The agentic workflow suggest [Code Generation with AlphaCodium: From Prompt Engineering to Flow Engineering](https://arxiv.org/abs/2401.08500) could be used for inspiration and it provides some interesting insights: 
 
@@ -108,7 +109,7 @@ The agentic workflow suggest [Code Generation with AlphaCodium: From Prompt Engi
 - When clearly asking the model to: “divide the generated code into small sub-functions, with meaningful names and functionality”, we observe a better-produced code, with fewer bugs, and higher success rates for the iterative fixing stages
 
 
-## Step 5 - Unit test generation and refinement
+## Step 5 - Constant refinment through unit tests
 Once there is code which compiles and runs, the focus should be on constant refinement. 
 
 To provide feedback, unit test results should be key. 

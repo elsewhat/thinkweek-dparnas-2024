@@ -2,13 +2,13 @@
 [elsewhat/multi-agent-crewai-experiments](https://github.com/elsewhat/multi-agent-crewai-experiments)
 
 ## Thoughts
-CrewAI+ product is a central part of there offering and in many ways it's not a traditional open-source project. 
+[CrewAI+](https://www.crewai.com/crewaiplus) product is a central part of their offering and in many ways it's not a traditional open-source project. 
 Nothing wrong necessarily with this, but worth being aware of. 
 
 ## Local models
 [Ollama support](https://docs.crewai.com/how-to/LLM-Connections/?h=ollama#ollama-integration) with local models is in place.
 
-[Memory](https://docs.crewai.com/core-concepts/Memory/?h=memory#how-memory-systems-empower-agents) by default uses OpenAI Embeddings by default and requires an OpenAI API key. 
+[Memory](https://docs.crewai.com/core-concepts/Memory/?h=memory#how-memory-systems-empower-agents) by default uses OpenAI Embeddings (even if local models are used for inference) and requires an OpenAI API key. 
 
 ## Tools
 Tools can be assigned to an agent or to a task.

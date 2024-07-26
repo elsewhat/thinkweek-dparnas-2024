@@ -31,7 +31,7 @@ In my opinion, this is very relevant abstraction for many use cases and can easi
 
 ## LangChain Expression Language (LCEL)
 "LangChain Expression Language, or LCEL, is a declarative way to easily compose chains together. 
-[..]
+
 chain = prompt | model | output_parser
 
 The | symbol is similar to a unix pipe operator, which chains together the different components, feeding the output from one component as input into the next component.
