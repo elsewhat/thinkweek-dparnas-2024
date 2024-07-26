@@ -69,9 +69,14 @@ Based on my experiences in the ThinkWeek, I believe it's possible to use LLMs in
 It will require: 
 
 - Combination of open and closed LLMs (fit for purpose and cost)
-- Well-defined workflows setup as cyclic graphs
+- Well-defined workflows setup as cyclic graphs with intermediate output in both structured and unstructered form
 - Tools to verify the validatity and quality of the output (such as [spectral-cli](https://github.com/stoplightio/spectral) ) included in the cyclic graphs
 - Agentic patterns emerging from research such as [ReAct - Synergizing reasoning and acting in language models](https://arxiv.org/abs/2210.03629), [Self-Refine: Iterative refinement with self-feedback ](https://arxiv.org/abs/2303.17651) and [Code Generation with AlphaCodium: From Prompt Engineering to Flow Engineering](https://arxiv.org/abs/2401.08500)
+
+
+Based on the tested framework, [LangChain](multi-agent/langchain.md) with it's [LangGraph](https://langchain-ai.github.io/langgraph/) and [LangChain Expression Language (LCEL)](https://python.langchain.com/v0.1/docs/expression_language/) appears to be the strongest. Open source ethos appears to be relatively strong in their deliveries, but they do have some enterprise products which may distract. 
+For example instead of using [LangSmith](https://www.langchain.com/langsmith), it might be better to use [LangFuse](https://github.com/langfuse/langfuse)
+
 
 
 # What is ThinkWeek
