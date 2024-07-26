@@ -3,25 +3,29 @@
 ## Topic of today - AI agent frameworks
 The topic of today has been AI agent frameworks relevant for modernizing enterprise software.
 
-The strategy to run deeplearning.ai courses for the relevant frameworks has been good. 
-However, this draws the focus away from reflection (which I believe is the most powerful process of a thinkweek). Considering revising day 2 slightly based on this.
+The strategy of completing [deeplearning.ai](https://deeplearning.ai/) courses for the relevant frameworks has worked out. 
+However, this draws the focus away from reflection (which I believe is the most powerful process of a thinkweek). Considering revising future days based on this.
 
 ## Office setup
 ![Office](img/office.png)
-Decided to use the "double-sacco" trick I learned from my kids for maximal comfort when consuming new content. 
+
+Decided to use the "double-sacco" trick I learned from my kids for maximal comfort when focusing on consuming content. 
+
+The PC is running a Nvidia 4090 GPU with 24GB of memory which comfortably runs open LLM model in the size range up to 25B parameters.
 
 ## Tools for ThinkWeek
-The toolchain setup for structuring and publishing my notes is based on the setup done last thinkweek.
+The toolchain setup for structuring and publishing my notes is based on the setup done last ThinkWeek.
+
 It consists of a github repo with notes in markdown. On every commit, a github action is triggered which runs mkdocs and publishes the content to [https://elsewhat.com/thinkweek-dparnas-2024/](https://elsewhat.com/thinkweek-dparnas-2024/).
 
 ## Time schedule
 
 - 08 Getting started
 - 09:00 Breakfast
-- 09:30 Deeplearning.ai course on Autgen
+- 09:30 Deeplearning.ai course on Autogen
 - 12:30 Short hike to a nearby
-- 14:00 Deeplearning course on Autogen continued
-- 17:00 Deeplearning course on Langchain
+- 14:00 Deeplearning.ai course on Autogen continued
+- 17:00 Deeplearning.ai course on Langchain
 - 19:00 Youtube videoes on various aspects of Autogen and Langchain
 
 ## View from the hike

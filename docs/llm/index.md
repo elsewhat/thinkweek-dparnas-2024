@@ -1,4 +1,21 @@
 
+## Running local LLM models
+I already have experience with running local LLM through [Ollama](https://ollama.com/). 
+
+The PC used for the ThinkWeek has a Nvidia 4090 GPU with 24GB which comfortably runs open LLM model in the size range up to 25B parameters.
+
+Ollama is running on windows and exposes its API interface through port 11434. I set environment variable `OLLAMA_DEBUG=1` to increase Ollama logging.
+
+The actual code used for experimenting is running through docker [devcontainers](https://containers.dev/). This allowed me to easily control dependencies directly from VS Code. 
+This is an overview of the code experiements performed using local models: 
+
+- AutoGen [elsewhat/multi-agent-autogen-experiments](https://github.com/elsewhat/multi-agent-autogen-experiments)
+- CrewAI [elsewhat/multi-agent-crewai-experiments](https://github.com/elsewhat/multi-agent-crewai-experiments)
+- LangChain [elsewhat/multi-agent-langgraph-experiments](https://github.com/elsewhat/multi-agent-langgraph-experiments)
+
+To connect to Ollama from a docker container, it's important to use [host.docker.internal](https://docs.docker.com/desktop/networking/#i-want-to-connect-from-a-container-to-a-service-on-the-host) instead of localhost or 127.0.0.1. For LangChain when using ChatOllama class, I also had to add environment variable for Ollama called `OLLAMA_ORIGINS=http://host.docker.internal:11434` for it not to get a `[Errno 101] Network is unreachable)`.
+
+I used [Edgeshark](https://edgeshark.siemens.io/) in order to do network tracing.
 
 ## Context window
 Learned that the context window for Ollama is usually 2K/8K regardless of what the actual model supported. 
@@ -37,3 +54,15 @@ able to constrain what we could build. On a philosophical level,
 this is a major reason why I believe so strongly in 
 uilding open ecosystems in AI and AR/VR for the next generation of computing.
 ```
+
+## Open models
+I did not focus on comparing and evaluating different local LLM models and their licenses. 
+
+From before, I had gathered a list of some relevant models and their license: 
+
+- [Phi3 from Microsoft](https://huggingface.co/collections/microsoft/phi-3-6626e15e9585a200d2d761e3) - [MIT license](https://huggingface.co/microsoft/Phi-3-mini-128k-instruct#license)
+- [Granite from IBM](https://huggingface.co/ibm-granite) - [Apache 2.0 license](https://github.com/ibm-granite/granite-code-models/tree/main)
+- [Gemma from Google](https://huggingface.co/google/gemma-7b) - [Apache 2.0 license](https://github.com/google-deepmind/gemma/blob/main/LICENSE) with [Gemma Terms of Use](https://ai.google.dev/gemma/terms) (includes prohibited use clausul)
+- [Mixtral from Mistral](https://huggingface.co/mistralai) - [Apache 2.0 license](https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.2) (I used its successor Mistral Nemo mistral-nemo-32kb:12b-instruct-2407-q8_0 quite a bit)
+- [Llama3 from Meta](https://github.com/meta-llama/llama3/blob/main/MODEL_CARD.md) - [Meta llama3 community license](https://llama.meta.com/llama3/license/)
+- [NorLLM from NorwAI ](https://www.universitetsavisa.no/406796)- Apache 2.0, but must also follow the underlying base model

@@ -6,7 +6,7 @@ This year's focus has been AI and how it will impact my work as an architect spa
 Key areas: 
 
 - State of open models
-- Hands-one experience on AI frameworks for agentic and multi-agent execution
+- Hands-one experience with AI frameworks for agentic and multi-agent execution
     - [AutoGen](multi-agent/autogen.md)
     - [crewAI](multi-agent/crewai.md)
     - [LangChain](multi-agent/langchain.md)
@@ -26,13 +26,9 @@ The pace of innovation is extremely high as a consequence of technical breakthro
 
 ## Closed vs Open AI
 AI's future form of deployment is a constant tug of war between the large tech companies.
-My personal impression is that there are enough forces pushing towards open models and the currently have the resources and motivation for it.
+My personal impression is that there are enough forces pushing towards open models and there are enough resources and motivation for it. 
 
-[Open Source AI Is the Path Forward](https://about.fb.com/news/2024/07/open-source-ai-is-the-path-forward/) is the title of Mark Zuckerbergs letter attached to the Llama 3.1 405B release.
-
-In this letter, he's very transparent on Meta's strategy around AI and what they believe is the way forward.
-
-He fires some shots towards vendor controlled ecosystem and it's clear they want to avoid this for AI.
+[Open Source AI Is the Path Forward](https://about.fb.com/news/2024/07/open-source-ai-is-the-path-forward/) is the title of Mark Zuckerbergs letter attached to the Llama 3.1 405B release. In this letter, he's very transparent on Meta's strategy around AI and what they believe is the way forward. He "fires some shots" towards vendor controlled ecosystems and it's clear Meta want to avoid this for AI.
 ```
 One of my formative experiences has been building our services constrained 
 by what Apple will let us build on their platforms. 
@@ -45,6 +41,8 @@ able to constrain what we could build. On a philosophical level,
 this is a major reason why I believe so strongly in 
 uilding open ecosystems in AI and AR/VR for the next generation of computing.
 ```
+
+My main concern around AI is that research and government insititutions do not have enough resources to be relevant and that the top talents are recruited by private section. 
 
 Whilst not a focus during the ThinkWeek, the geopolitical implactions of AI have started to emerge especially the last year. 
 [Situational Awareness ](https://situational-awareness.ai/) from Leopold Aschenbrenner is a must read to understand where we might be heading. 
@@ -62,7 +60,7 @@ There is plenty of truths to this, but not all of the arguments can be translate
 Here there right frameworks provide additional benefits for how the code is maintained and extended over its lifetime.
 
 ## Modernizing enterprise sofware with LLMs
-The background for this thought experiment is the renwal of large enterprise system with lots of technical debt and outdated technology. 
+The background for this thought experiment is the renwal of large enterprise system with outdated technology and plenty of technical debt. 
 Typically, such solutions will take years to modernize with a traditional approach and have high complexity and risk. 
 
 Based on my experiences in the ThinkWeek, I believe it's possible to use LLMs in this modernization process. 
@@ -75,9 +73,7 @@ It will require:
 
 
 Based on the tested framework, [LangChain](multi-agent/langchain.md) with it's [LangGraph](https://langchain-ai.github.io/langgraph/) and [LangChain Expression Language (LCEL)](https://python.langchain.com/v0.1/docs/expression_language/) appears to be the strongest. Open source ethos appears to be relatively strong in their deliveries, but they do have some enterprise products which may distract. 
-For example instead of using [LangSmith](https://www.langchain.com/langsmith), it might be better to use [LangFuse](https://github.com/langfuse/langfuse)
-
-
+As a consequence instead of using [LangSmith](https://www.langchain.com/langsmith), it might be better to use more open solutions such as [LangFuse](https://github.com/langfuse/langfuse).
 
 # What is ThinkWeek
 The following figure from [Reservations.com](https://www.reservations.com/blog/resources/think-weeks/) sums up the practical aspects of a Think Week.

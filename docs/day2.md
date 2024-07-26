@@ -1,6 +1,6 @@
 # Day 2 - 23.07
 
-## Topic of today - AI agent frameworks
+## Topic of today
 Continued on AI agent frameworks in the first half of the day. 
 
 Created repos with experiments with: 

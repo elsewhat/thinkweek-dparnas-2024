@@ -36,14 +36,14 @@ nav:
     - Day 2:                        day2.md
     - Day 3:                        day3.md
     - Day 4:                        day4.md
-    - Day 5:                        day5.md        
+    - Day 5:                        day5.md
+  - Open LLM models:
+    - Overview:                     llm/index.md            
   - AI agent frameworks:
     - Overview:                     multi-agent/index.md
     - Autogen:                      multi-agent/autogen.md
     - Langchain:                    multi-agent/langchain.md
     - crewAI:                       multi-agent/crewai.md
-  - Open LLM models:
-    - Overview:                     llm/index.md
   - Modernizing enterprise software with LLMs:
     - Overview:                     modernizing/index.md
     - PL/SQL:                       modernizing/plsql.md
