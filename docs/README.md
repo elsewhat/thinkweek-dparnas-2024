@@ -10,7 +10,7 @@ Key areas:
     - [AutoGen](multi-agent/autogen.md)
     - [crewAI](multi-agent/crewai.md)
     - [LangChain](multi-agent/langchain.md)
-- Modernizing enterprise sofware with LLMs
+- Modernizing enterprise solutions with LLMs
 
 # Key findings
 
