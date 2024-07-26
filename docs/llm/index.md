@@ -26,5 +26,14 @@ In this, he's very transparent on Meta's strategy around AI and what they believ
 
 He fires some shots towards vendor controlled ecosystem and it's clear they want to avoid this for AI.
 ```
-One of my formative experiences has been building our services constrained by what Apple will let us build on their platforms. Between the way they tax developers, the arbitrary rules they apply, and all the product innovations they block from shipping, it’s clear that Meta and many other companies would be freed up to build much better services for people if we could build the best versions of our products and competitors were not able to constrain what we could build. On a philosophical level, this is a major reason why I believe so strongly in building open ecosystems in AI and AR/VR for the next generation of computing.
+One of my formative experiences has been building our services constrained 
+by what Apple will let us build on their platforms. 
+Between the way they tax developers, the arbitrary rules they apply,
+ and all the product innovations they block from shipping,
+it’s clear that Meta and many other companies would be 
+freed up to build much better services for people if we could build 
+the best versions of our products and competitors were not 
+able to constrain what we could build. On a philosophical level, 
+this is a major reason why I believe so strongly in 
+uilding open ecosystems in AI and AR/VR for the next generation of computing.
 ```

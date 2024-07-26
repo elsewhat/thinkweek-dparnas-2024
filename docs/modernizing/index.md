@@ -1,7 +1,7 @@
 ## Coversion of Oracle table definitions to OpenAPI specification
 Use self-refine iterative refinement with self-feedback pattern.
 
-The refinement steps is handled by s[pectral-cli](https://github.com/stoplightio/spectral) command line tool for verifying OpenAPI specifications. 
+The refinement steps is handled by [spectral-cli](https://github.com/stoplightio/spectral) command line tool for verifying OpenAPI specifications. 
 
 ![Capture](img/graph_ora_tables.png)
 
