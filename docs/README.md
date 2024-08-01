@@ -6,7 +6,7 @@ This year's focus has been AI and how it will impact my work as an architect spa
 Key areas: 
 
 - State of open models
-- Hands-one experience with AI frameworks for agentic and multi-agent execution
+- Hands-on experience with AI frameworks for agentic and multi-agent execution
     - [AutoGen](multi-agent/autogen.md)
     - [crewAI](multi-agent/crewai.md)
     - [LangChain](multi-agent/langchain.md)
